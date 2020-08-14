@@ -1,0 +1,41 @@
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/spa
+server-->browser: HTML-code
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/spa.css
+server-->browser: spa.css
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/spa.js
+server-->browser: spa.js
+
+note over browser:
+browser starts executing js-code
+that requests JSON data from server 
+end note
+
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/data.json
+server-->browser: [{ content: "HTML is easy", date: "2019-05-23" }, ...]
+
+note over browser:
+browser executes the event handler
+that renders notes to display
+end note
+
+note over browser:
+browser starts executing js-code 
+with the submit event triggered.
+end note
+
+note over browser:
+A new object is created with content and date keys,
+the new object is added to the list of objects
+collected from the server before that.
+end note
+
+note over browser:
+A new list element containing the text entered is added to 
+the html <ul> element containing a list of text entered.
+end note
+
+browser->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+server-->browser: {"message":"note created"}
+note over browser:
+log the responseText in the browser console.
+end note
