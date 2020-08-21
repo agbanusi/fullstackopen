@@ -1,3 +1,3 @@
 # fullstackopen
 
-Soloutions to exercises given in fullstackopen (fullstack.io)
+Solutions to exercises given in fullstackopen (fullstack.io)
