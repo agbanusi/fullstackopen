@@ -1,0 +1,14 @@
+{
+  "name": "unicafe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html -p 3000",
+    "dev": "npm install parcel-bundler --save-dev &&npm run start",
+    "build": "parcel build index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
